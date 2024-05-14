@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
-import Logo from './Logo'
-import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon } from './Icons';
+import SearchBar from './SearchBar'
+import { MailIcon, GithubIcon, LinkedInIcon } from './Icons';
 import { motion } from 'framer-motion';
 
 const CustomLink = ({ href, title, className="" }) => {
@@ -29,16 +29,16 @@ function NavBar() {
             <CustomLink href="/" title="Home" className='mr-4' />
             <CustomLink href="/about" title="About" className='mx-4' />
             <CustomLink href="/projects" title="Projects" className='mx-4' />
-            <CustomLink href="/articles" title="Articles" className='ml-4'/>
+            <CustomLink href="/articles" title="Contact" className='ml-4'/>
         </nav>
         <nav className='flex items-center justify-center flex-wrap'>
-            <motion.a href="/" target="(_blank)"
+            <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"
                 whileHover={{y:-2}} 
                 whileTap={{scale:0.9}}
                 className='w-6 mr-3'>
-                <TwitterIcon/>
+                <LinkedInIcon/>
             </motion.a>
-            <motion.a href="/" target="(_blank)"  
+            <motion.a href="https://github.com/21Ophelie" target="(_blank)"  
                 whileHover={{y:-2}} 
                 whileTap={{scale:0.9}}
                 className='w-6 mx-3'>
@@ -47,24 +47,12 @@ function NavBar() {
             <motion.a href="/" target="(_blank)"
                 whileHover={{y:-2}} 
                 whileTap={{scale:0.9}}
-                className='w-6 mx-3'>
-                <LinkedInIcon/>
-            </motion.a>
-            <motion.a href="/" target="(_blank)"
-                whileHover={{y:-2}} 
-                whileTap={{scale:0.9}}
-                className='w-6 mx-3'>
-                <PinterestIcon/>
-            </motion.a>
-            <motion.a href="/" target="(_blank)"
-                whileHover={{y:-2}} 
-                whileTap={{scale:0.9}}
                 className='w-6 ml-3'>
-                <DribbbleIcon/>
+                <MailIcon/>
             </motion.a>
         </nav>
         <div className='absolute left-[50%] top-2 translate-x-[-50%]'>
-            <Logo/>
+            <SearchBar/>
         </div>
     </header>
   )

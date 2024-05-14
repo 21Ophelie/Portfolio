@@ -4,9 +4,10 @@ import profilePic from '../../public/images/profile/developer-pic.png'
 import AnimatedText from '@/components/AnimatedText'
 import Link from 'next/link'
 import Image from 'next/image'
-import { LinkArrow } from '@/components/Icons'
+import { DeveloperPic, LinkArrow } from '@/components/Icons'
 import HireMe from '@/components/HireMe'
 import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
+import { ReactTyped } from "react-typed";
 
 export default function Home() {
   return (
@@ -18,16 +19,30 @@ export default function Home() {
       <main className='flex items-center text-dark w-full min-h-screen'>
         <Layout className='pt-0'>
           <div className='flex items-center justify-between w-full '>
-            <div className='w-1/3'>
-              <Image src={profilePic} alt="profile picture" className="w-full h-auto"/>
+            <div className='w-2/5'>
+              <DeveloperPic className="ml-20 h-1/2"/>
             </div>
-            <div className='w-1/2 flex flex-col items-center self-center'>
+            <div className='w-1/2 flex flex-col items-center self-center pb-24 pr-16'>
               <AnimatedText text="Hello, I'm Ophélie ! Nice to meet you" className="!text-6xl !text-left"/>
-              <p className='my-4 text-base font-medium'>
-              As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. 
-  Explore my latest projects and articles, showcasing my expertise in React.js and web development.
-              </p>
+             
               <div className='flex items-center self-start mt-2'>
+
+                <ReactTyped className='my-4 font-semibold text-xl ml-2'
+                          strings={[
+                            "I'm a software developer",
+                            "I'm a web developer",
+                            "I'm a full-stack developer",
+                            "I'm a UI/UX designer",
+                            "I do Kung Fu",
+                            "I love singing"
+                          ]}
+                          typeSpeed={40}
+                          backSpeed={50}
+                          loop
+                      />
+              </div>
+             
+              {/* <div className='flex items-center self-start mt-2'>
                 <Link 
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                   hover:bg-light hover:text-dark border border-solid border-transparent hover:boder-dark" 
@@ -38,14 +53,14 @@ export default function Home() {
                 <Link href="mailto:ophelie.deschaux@gmail.com" target={"_blank"}
                   className="ml-4 text-lg font-medium capitalize text-dark underline"
                 >Contact</Link>
-              </div>
+              </div>*/}
             </div>
 
           </div>
         </Layout>
-        <HireMe/>
+        
         <div className='absolute right-8 bottom-8 inline-block w-24'>
-          <Image src={lightBulb} alt="icons" className='w-full h-auto'/>
+          <HireMe/>
         </div>
       </main>
     </>
