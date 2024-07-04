@@ -9,12 +9,12 @@ module.exports = {
         mont: ['var(--font-mont)']
       },
       colors: {
-        dark: "#221800",
-        light: "#FFE7AD",
-        primary: "#C4FCF0", 
-        primaryDark: "#C4FCF0", 
-        secondary: "#669B90",
-        tertiary: "#00755D"
+        dark: "#000000",
+        light: "#FFFFFF",
+        primary: "#2f6674", 
+        primaryDark: "#2f6674", 
+        secondary: "#71115a",
+        tertiary: "#5b0045"
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite'
