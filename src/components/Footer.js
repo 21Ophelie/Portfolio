@@ -11,7 +11,7 @@ const Footer = () => {
         <Layout className='py-8 flex items-center justify-between'>
             <span>{new Date().getFullYear()} &copy; All Rights reserved.</span>
             <div>
-              Portofolio inspired by&nbsp;
+              Portfolio inspired by&nbsp;
               <motion.a 
                 className='underline underline-offset-2' 
                 href="https://devdreaming.com/"  target="(_blank)"
