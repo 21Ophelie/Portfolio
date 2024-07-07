@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
-import profilPic from '../../public/images/profile/dev33.png'
+import profilPic from '../../public/images/profile/dev-pic-light.png'
 import Image from 'next/image'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 
@@ -27,7 +27,7 @@ const AnimatedNumbers = ({value}) => {
         })
     }, [springValue, value])
     
-    return <span ref={ref}></span>
+    return <span className='text-primary' ref={ref}></span>
 }
 
 const about = () => {
@@ -38,46 +38,46 @@ const about = () => {
         <meta name="description" content="any descr"/>
     </Head>
     <main className='flex flex-col items-center justify-center w-full'>
-        <Layout className='pt-16'>
-            <AnimatedText text="About"/>
+        <Layout>
+            <AnimatedText text="About me" className="!text-6xl pb-12 "/>
             <div className='grid w-full grid-cols-8 gap-16 text-light'>
-                <div className='col-span-3 flex flex-col items-start justify-start'>
+                <div className='col-span-3 flex flex-col'>
                     <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>Biography</h2>
-                    <p className='font-medium'>
+                    <p className='font-medium text-justify'>
                         Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
                         and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
                         new and innovative ways to bring my clients' visions to life.
                     </p>
-                    <p className='my-4 font-medium'>                        
-                        I believe that design is about more than just making things look pretty – it's about solving problems and 
-                        creating intuitive, enjoyable experiences for users. 
-                    </p>
-                    <p className='font-medium'>
-                        Whether I'm working on a website, mobile app, or 
-                        other digital product, I bring my commitment to design excellence and user-centered thinking to 
-                        every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
-                    </p>
-                </div>
-              
-                <div className='col-span-3 relative absoltute rounded-2xl border-8 border-solid border-light'>
-                    <Image src={profilPic} alt="Profile picture" className='w-full h-auto rounded-[0.5rem] pt-4 bg-primary'/>
-                </div>
-
-                <div className='col-span-2 flex flex-col justify-between'>
-
-                    <div className='flex-col items-end justify-center'>
+                    <div className='my-4 flex flex-col items-end justify-center'>
                         <span className='inline-block text-7xl font-bold'>
                             <AnimatedNumbers value="3"/>+
                         </span>
                         <h2 className='font-medium capitalize text-xl text-light/75'>years of experience</h2>
                     </div>
-                    <div className='flex-col items-end justify-center'>
+                </div>
+
+                <div className='col-span-2 flex flex-col justify-between'>
+                    <div className='relative absoltute rounded-2xl border-8 border-solid border-primary'>
+                        <Image src={profilPic} alt="Profile picture" className='rounded-[0.5rem] pt-4'/>
+                    </div>
+                </div>
+
+                <div className='col-span-3 flex flex-col'>
+                    <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>Biography</h2>
+                    <p className='font-medium text-justify'>
+                        Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
+                        and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
+                        new and innovative ways to bring my clients' visions to life.
+                    </p>
+                    <div className='my-4 flex flex-col items-end justify-center'>
                         <span className='inline-block text-7xl font-bold'>
                             <AnimatedNumbers value="9"/>+
                         </span>
                         <h2 className='font-medium capitalize text-xl text-light/75'>programming languages known</h2>
                     </div>
                 </div>
+              
+               
             </div>
 
         </Layout>

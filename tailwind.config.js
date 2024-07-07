@@ -12,13 +12,16 @@ module.exports = {
         dark: "#000000",
         light: "#FFFFFF",
         primary: "#2f6674", 
-        primaryDark: "#2f6674", 
-        secondary: "#71115a",
+        primaryLight: "#71115a", 
+        secondary: "#a25107",
         tertiary: "#5b0045"
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite'
-      }  
+      },
+      backgroundImage: {
+       circularLight: 'repeating-radial-gradient(rgba(255,255,255,0.4) 8px, #71115a 5px, #5b0045 100px);'
+      } 
     }
   },
   plugins: [],

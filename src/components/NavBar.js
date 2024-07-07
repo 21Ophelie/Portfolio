@@ -9,7 +9,7 @@ const CustomLink = ({ href, title, className="" }) => {
     const router = useRouter();
 
     return (
-        <Link href={{href}} className={`${className} relative group`}>
+        <Link href={href} className={`${className} relative group`}>
             {title}
             <span className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
             group-hover:w-full transition-[width] ease duration-300
@@ -26,8 +26,9 @@ function NavBar() {
   return (
     <header className='w-full text-light px-32 py-8 font-medium flex items-center justify-between'>
         <nav>
-            <CustomLink href="/" title="Home" className='mr-4' />
-            <CustomLink href="/about" title="About" className='mx-4' />
+            <CustomLink href="/" title="Home" className='text-light mr-4'/>          
+            <CustomLink href="/about" title="About" className='mx-4'/>
+            <CustomLink href="/resume" title="Resume" className='mx-4'/>
             <CustomLink href="/projects" title="Projects" className='mx-4' />
             <CustomLink href="/articles" title="Contact" className='ml-4'/>
         </nav>
