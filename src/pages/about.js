@@ -58,7 +58,7 @@ const about = () => {
 
                 <div className='col-span-2 flex flex-col justify-between'>
                     <div className='relative absoltute rounded-2xl border-8 border-solid border-primary'>
-                        <Image src={profilPic} alt="Profile picture" className='rounded-[0.5rem] pt-4'/>
+                        <Image src={profilPic} alt="Profile picture" priority className='rounded-[0.5rem] pt-4'/>
                     </div>
                 </div>
 

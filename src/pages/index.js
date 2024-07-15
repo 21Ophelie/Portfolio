@@ -20,7 +20,9 @@ export default function Home() {
         <Layout className='pt-0'>
           <div className='flex items-center justify-center w-full '>
             <div className='w-2/6'>
-              <Image src={profilePic} height={450} />
+              <Image src={profilePic} alt="profilPic" height={450}
+                priority
+                />
             </div>
             <div className='w-1/2 flex flex-col items-center self-center pb-24 pr-16'>
               <AnimatedText text="Hello, I'm Ophélie ! Nice to meet you" className="!text-6xl !text-left"/>
