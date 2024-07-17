@@ -56,10 +56,12 @@ const about = () => {
                     </div>
                 </div>
 
-                <div className='col-span-2 flex flex-col justify-between'>
-                    <div className='relative absoltute rounded-2xl border-8 border-solid border-primary'>
-                        <Image src={profilPic} alt="Profile picture" priority className='rounded-[0.5rem] pt-4'/>
-                    </div>
+                <div className='col-span-2 relative'>
+                <div className='absolute top-12 h-64 left-1 w-60 absoltute rounded-2xl border-8 border-solid border-light'>
+                </div>
+                <div className='z-30 relative'>
+                        <Image src={profilPic} height={"450px"} alt="Profile picture" priority className='rounded-[0.5rem]'/>
+                </div>
                 </div>
 
                 <div className='col-span-3 flex flex-col'>

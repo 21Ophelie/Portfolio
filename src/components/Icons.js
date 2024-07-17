@@ -27,7 +27,7 @@ export const LinkedInIcon = ({ className, ...rest }) => (
     {...rest}
     className={`w-full h-auto ${className}`}
   >
-    <path fill="#5b0045" d="M0 0h256v256H0z" />
+    <path fill="none" d="M0 0h256v256H0z" />
     <g fill="#5b0045">
       <rect width={256} height={256} fill="#5b0045" rx={60} />
       <rect width={256} height={256} fill="#FFFFFF" rx={60} />
