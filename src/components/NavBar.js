@@ -67,7 +67,7 @@ function NavBar() {
             <div className='w-full flex justify-between items-center lg:hidden'>
                 <nav>
                     <CustomLink href="/" title="Home" className='text-light mr-4' />
-                    <CustomLink href="/about" title="About" className='mx-4' />
+                    <CustomLink href="/about" title="About & Services" className='mx-4' />
                     <CustomLink href="/resume" title="Resume" className='mx-4' />
                     <CustomLink href="/articles" title="Contact" className='ml-4' />
                 </nav>
@@ -81,7 +81,7 @@ function NavBar() {
                     <motion.a href="https://github.com/21Ophelie" target="(_blank)"
                         whileHover={{ y: -2 }}
                         whileTap={{ scale: 0.9 }}
-                        className='w-6 mx-3'>
+                        className='w-7 mx-3'>
                         <GithubIcon />
                     </motion.a>
                 </nav>

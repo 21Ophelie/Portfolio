@@ -27,60 +27,100 @@ const AnimatedNumbers = ({value}) => {
         })
     }, [springValue, value])
     
-    return <span className='text-primary' ref={ref}></span>
+    return <span ref={ref}></span>
 }
 
 const about = () => {
   return (
     <>
     <Head>
-        <title>Ophelie | About page</title>
+        <title>Ophelie | About and services page</title>
         <meta name="description" content="any descr"/>
     </Head>
-    <main className='flex flex-col items-center justify-center w-full'>
+    <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text="About me" className="!text-6xl pb-12 "/>
-            <div className='grid w-full grid-cols-8 gap-16 text-light'>
-                <div className='col-span-3 flex flex-col'>
-                    <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>Biography</h2>
-                    <p className='font-medium text-justify'>
-                        Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-                        and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
-                        new and innovative ways to bring my clients' visions to life.
-                    </p>
-                    <div className='my-4 flex flex-col items-end justify-center'>
-                        <span className='inline-block text-7xl font-bold'>
-                            <AnimatedNumbers value="3"/>+
-                        </span>
-                        <h2 className='font-medium capitalize text-xl text-light/75'>years of experience</h2>
+            <AnimatedText text="Who I Am & What I Do" className="!text-8xl pb-12 "/>
+            <div className='grid w-full grid-cols-8 lg:flex flex-col gap-16 text-light flex-wrap'>
+                <div className='col-span-5 flex flex-col justify-between'>
+                    <div className=' bg-primaryLight p-10 rounded-2xl'>
+                        <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>About me</h2>
+                        <div className='font-medium text-justify gap-5 flex flex-col'>
+                            <div> Hi, I'm Ophélie, a french web and software developer with 3 years of experience. 
+                                I specialize in creating high-quality, user-friendly digital solutions. 
+                                I'm passionate about code, efficient design, and solving problems.</div>
+                            <div>When I'm not coding, you can find me running, practising Kung Fu or playing music, 
+                                always looking for inspiration and new challenges. </div>
+                            <div>I'm dedicated to continuous learning and growth, 
+                                and I'm excited to bring my expertise to your next project.</div>
+                        </div>
                     </div>
+                   
                 </div>
 
-                <div className='col-span-2 relative'>
-                <div className='absolute top-12 h-64 left-1 w-60 absoltute rounded-2xl border-8 border-solid border-light'>
-                </div>
-                <div className='z-30 relative'>
-                        <Image src={profilPic} height={"450px"} alt="Profile picture" priority className='rounded-[0.5rem]'/>
-                </div>
-                </div>
-
-                <div className='col-span-3 flex flex-col'>
-                    <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>Biography</h2>
-                    <p className='font-medium text-justify'>
-                        Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
-                        and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
-                        new and innovative ways to bring my clients' visions to life.
-                    </p>
-                    <div className='my-4 flex flex-col items-end justify-center'>
-                        <span className='inline-block text-7xl font-bold'>
-                            <AnimatedNumbers value="9"/>+
-                        </span>
-                        <h2 className='font-medium capitalize text-xl text-light/75'>programming languages known</h2>
+                <div className='col-span-3 relative flex flex-col-reverse'>
+                    <div className='absolute h-full w-full rounded-2xl border-1 border-solid 
+                                    backdrop-blur-md bg-light/20 '>
                     </div>
-                </div>
-              
+                    <div className='z-30 relative self-end'>
+                            <Image src={profilPic} alt="Profile picture" priority 
+                            className='rounded-[0.5rem]' 
+                            width={275}
+                            />
+                    </div>
+                </div>                         
                
             </div>
+
+            <div className='flex flex-row justify-around text-light flex-wrap my-10' >
+                        <div className='my-4 flex flex-col items-end justify-center'>
+                            <span className='inline-block text-7xl font-bold'>
+                                <AnimatedNumbers value="3"/>+
+                            </span>
+                            <h2 className='font-medium capitalize text-xl text-light/75'>years of experience</h2>
+                        </div>
+                        <div className='my-4 flex flex-col items-end justify-center'>
+                            <span className='inline-block text-7xl font-bold'>
+                                <AnimatedNumbers value="9"/>+
+                            </span>
+                            <h2 className='font-medium capitalize text-xl text-light/75'>programming languages known</h2>
+                        </div>
+                    </div>
+
+            <div className='col-span-2 flex flex-col  bg-primary p-10 rounded-2xl '>
+                    <div flex flex-row >
+                        <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>What I offer</h2>
+                        
+                        <div className='font-medium text-justify gap-16 flex flex-row justify-start flex-wrap'>
+                            <div>
+                                <div className='font-bold'>
+                                Web Development
+                                </div>
+                                <ul className='pl-3 pt-2 flex gap-2 flex-col'>
+                                <li><strong>&#10004; Responsive Design:</strong> Websites that work on all devices.</li>
+                                <li>&#10004; Custom Websites: Tailored to your brand and needs.</li>
+                                <li>&#10004; E-commerce: Secure and scalable online stores.</li>
+                                <li>&#10004; CMS Integration: Easy website management with WordPress.</li>
+                                <li>&#10004; SEO Optimization: Improve your website's search engine visibility.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div className='font-bold'>Software Development</div>
+                                <ul className='pl-3 pt-2 flex gap-2 flex-col'>
+                                <li>&#10004; Custom Applications: Software solutions for your business.</li>
+                                <li>&#10004; API Development: Seamless system integration.</li>
+                                <li>&#10004; Database Management: Secure and organized data.</li>
+                                <li>&#10004; Maintenance & Support: Keeping your software running smoothly.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div className='m-auto text-center mt-10'>
+                            Let's work together to bring your ideas to life !
+                        </div>
+                    </div>
+                    
+                    
+                </div>
 
         </Layout>
 

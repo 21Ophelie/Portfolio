@@ -44,7 +44,7 @@ const Skills = () => {
             <Skill name="Motivation" x="-14vw" y="-16vw" color="primary"/>
             <Skill name="Attention to Detail" x="-20vw" y="-5vw" color="primary"/>
             <Skill name="Planning" x="36vw" y="12vw" color="primary"/>
-            <Skill name="Positivity +=+" x="-7vw" y="18vw" color="primary"/>
+            <Skill name="Positivity" x="-7vw" y="18vw" color="primary"/>
         </div>       
     
     </>

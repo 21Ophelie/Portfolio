@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
+import AnimatedText from './AnimatedText'
 
 const Details = ({position, company, companyLink, time, address, work }) => {
     const ref = useRef(null);
@@ -37,15 +38,14 @@ const Experience = () => {
         }
     );
   return (
-    <div className='my-4'>
-        <h2 className='font-bold text-8xl mb-12 w-full text-center'>
-            Experiences
-        </h2>
+    <div className='my-8'>
+        <AnimatedText text="Experiences" className='font-bold text-primary text-8xl mb-12 w-full text-center'/>
+            
 
         <div ref={ref} className='w-[75%] mx-auto relative'>
             <motion.div 
                 style={{scaleY: scrollYProgress}}
-                className='absolute left-14 top-0 w-[4px] h-full bg-light origin-top' />
+                className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />
             <ul w-full flex flex-col items-start justify-between ml-4>                
                 <Details
                         position="Software engineer" 
