@@ -19,55 +19,53 @@ export default function Home() {
       </Head>
       <main className='relative flex items-start text-light w-full min-h-screen'>
 
-      <div className='min-w-[50vw] px-10 pt-10 pb-0 sm:px-0
+      <div className='min-w-[50vw] pb-0 sm:px-0
                            rounded-lg backdrop-blur-md'>
         <Layout className='pt-0'>
-        <div className='absolute bottom-0 top-0 opacity-40'>
-               <Image src={girl1} alt="drawing" width={1050} />
-  </div> 
 
-          <div className='bg-light/60 rounded-2xl p-10 flex flex-row flex-wrap items-start justify-center w-full '>
-
-            <div className=' flex flex-col items-center self-center'>
-              <AnimatedText text="Hello, I'm Ophélie ! Nice to meet you" className="!text-8xl lg:!text-6xl !text-left"/>
-             
-              <div className='flex items-center self-start mt-2'>
-
-                <ReactTyped className='my-4 font-semibold text-primary text-3xl ml-2'
-                          strings={[
-                            "I'm a software developer",
-                            "I'm a web developer",
-                            "I'm a full-stack developer",
-                            "I'm an UI/UX designer",
-                            "I do Kung Fu",
-                            "I love singing"
-                          ]}
-                          typeSpeed={40}
-                          backSpeed={50}
-                          loop
-                      />
-              </div>
-             
-              {/* <div className='flex items-center self-start mt-2'>
-                <Link 
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
-                  hover:bg-light hover:text-dark border border-solid border-transparent hover:boder-dark" 
-                  download={true}
-                  href="/dummy.pdf" target={"_blank"}>
-                    Resume <LinkArrow className="w-6 ml-1"/>
-                </Link>
-                <Link href="mailto:ophelie.deschaux@gmail.com" target={"_blank"}
-                  className="ml-4 text-lg font-medium capitalize text-dark underline"
-                >Contact</Link>
-              </div>*/}
-            </div>
-
+          <div className='mx-auto relative pd-10 flex flex-row items-center self-center justify-center'>
+            <AnimatedText text="Hello, I'm Ophélie !" className="!text-8xl mx-auto justify-self-center items-center self-center lg:!text-6xl !text-left"/>
           </div>
-        </Layout>
-        </div>
+          <div className='mt-8 w-[90vw]  '>
+                <Image src={girl1} alt="drawing" className='w-full' />
+          </div>             
+              
+          <div className=' absolute top-48 left-1/3 right-1/3 flex bg-light/75 backdrop-blur px-5 py-3 mx-auto rounded-2xl items-center self-center mt-2'>
+
+            <ReactTyped className='my-4 font-semibold text-primary text-3xl ml-2'
+                            strings={[
+                              "I'm a software developer",
+                              "I'm a web developer",
+                              "I'm a full-stack developer",
+                              "I'm an UI/UX designer",
+                              "I do Kung Fu",
+                              "I love singing"
+                            ]}
+                            typeSpeed={40}
+                            backSpeed={50}
+                            loop
+                        />
         
-        <div className='absolute right-8 bottom-8 inline-block w-24'>
-          <HireMe/>
+              
+                {/* <div className='flex items-center self-start mt-2'>
+                  <Link 
+                    className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+                    hover:bg-light hover:text-dark border border-solid border-transparent hover:boder-dark" 
+                    download={true}
+                    href="/dummy.pdf" target={"_blank"}>
+                      Resume <LinkArrow className="w-6 ml-1"/>
+                  </Link>
+                  <Link href="mailto:ophelie.deschaux@gmail.com" target={"_blank"}
+                    className="ml-4 text-lg font-medium capitalize text-dark underline"
+                  >Contact</Link>
+                </div>*/}
+          </div>
+
+
+
+
+
+        </Layout>
         </div>
       </main>
     </>

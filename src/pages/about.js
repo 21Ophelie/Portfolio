@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import profilPic from '../../public/images/profile/dev-pic-light.png'
 import Image from 'next/image'
+import HireMe from '@/components/HireMe'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 
 const AnimatedNumbers = ({value}) => {
@@ -42,7 +43,7 @@ const about = () => {
             <AnimatedText text="Who I Am & What I Do" className="!text-8xl pb-12 "/>
             <div className='grid w-full grid-cols-8 lg:flex flex-col gap-16 text-light flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
-                    <div className=' bg-primaryLight p-10 rounded-2xl'>
+                    <div className=' bg-primary p-10 rounded-2xl'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>About me</h2>
                         <div className='font-medium text-justify gap-5 flex flex-col'>
                             <div> Hi, I'm Ophélie, a french web and software developer with 3 years of experience. 
@@ -86,7 +87,7 @@ const about = () => {
                         </div>
                     </div>
 
-            <div className='col-span-2 flex flex-col  bg-primary p-10 rounded-2xl '>
+            <div className='col-span-2 flex flex-col  bg-other/75 p-10 rounded-2xl '>
                     <div flex flex-row >
                         <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>What I offer</h2>
                         
@@ -114,10 +115,22 @@ const about = () => {
                             </div>
                             
                         </div>
-                        <div className='m-auto text-center mt-10'>
+                        <div className='m-auto text-center mt-10 relative'>
+                            <div>
                             Let's work together to bring your ideas to life !
+                            </div>
+                           
+                                <HireMe/>
+                            
                         </div>
+                        
+
+                        
+                    
                     </div>
+
+                   
+
                     
                     
                 </div>

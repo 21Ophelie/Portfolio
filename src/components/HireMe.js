@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const MotionLink = motion(Link);
 const HireMe = () => {
   return (
-    <div className='fixed right-14 bottom-4 flex items-center justify-center overflow-hidden'>
+    <div className='z-40 absolute -bottom-32 right-8 flex items-center justify-center'>
         <div className='w-48 h-auto flex items-center justify-center relative'>
             <CircularText className={"fill-light animate-spin-slow"}></CircularText>
             <MotionLink 
