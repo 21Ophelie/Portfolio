@@ -3,7 +3,7 @@ import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
 import AnimatedText from './AnimatedText';
 
-const Details = ({position, company, companyLink, time, address, work }) => {
+const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);
     return (
         <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
@@ -17,9 +17,10 @@ const Details = ({position, company, companyLink, time, address, work }) => {
                     {position}&nbsp;<a 
                         href={companyLink} 
                         target="_blank"
-                        className='text-secondary capitalize'>@{company}</a>
+                        className='underline capitalize'>@{company}</a>
                     </h3>
                 <span className='capitalize font-medium text-white/75'>{time} | {address}</span>
+                <div className='capitalize font-bold'>{title}</div>
                 <p className='font-medium w-full'>
                     {work}
                 </p>
@@ -39,58 +40,49 @@ const Education = () => {
     );
   return (
     <div className='my-32'>
-        <AnimatedText text="Education" className='font-bold text-8xl mb-12 w-full text-secondary text-center'/>
+        <h2 className='font-bold text-6xl mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
+            Education
+        </h2>
 
         <div ref={ref} className='w-[75%] mx-auto relative'>
             <motion.div 
                 style={{scaleY: scrollYProgress}}
-                className='absolute left-14 top-0 w-[4px] h-full bg-secondary origin-top' />
+                className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />
             <ul w-full flex flex-col items-start justify-between ml-4>                
                 <Details
-                        position="Software engineer" 
-                        company="Infotel" 
-                        companyLink="https://insoft-infotel.com/"
-                        time="March 2021 - October 2024" 
-                        address="Toulouse, France" 
-                        work="Work as a full-stack developper on Arcsys, an archiving software. Front-end (Typescript, Angular), REST API, Back-end (Java), Build (Jenkins)."
+                        position="Erasmus student" 
+                        company="Università di Padova" 
+                        companyLink="https://www.unipd.it/en/"
+                        time="September 2020 - March 2021" 
+                        address="Padova, Italie" 
+                        work="Major in Computer science and Machine Learning (AI)"
                     />
                     <Details
-                        position="Searcher in a Laboratory" 
-                        company="Technological University of Dublin" 
-                        companyLink="https://www.tudublin.ie/"
-                        time="Summer 2020 (Internship)" 
-                        address="Dublin, Irlande (Full remote)" 
-                        title="Détection et prévention de chutes"
-                        work="Mise en place d'une solution informatique récupérant des données 
-                        via Bluetooth afin de pouvoir détecter si une personne fait un malaise. Mise 
-                        en place d'une interaction vocale.
-                        Environnement technique : Python, Linux
-                        Outils : Détecteur de fréquence cardiaque (polar OH1+) et de mouvement 
-                        (BBC micro:bit)."
-                    />
-                    <Details
-                        position="Searcher in a Laboratory" 
-                        company="Hubert Curien Laboratory" 
-                        companyLink="https://laboratoirehubertcurien.univ-st-etienne.fr/en/"
-                        time="January 2019 - February 2019 (Internship)" 
+                        position="Graduate student" 
+                        company="Telecom Saint-Etienne" 
+                        companyLink="https://www.telecom-st-etienne.fr/en/"
+                        time="September 2018 - October 2021" 
                         address="Saint-Etienne, France" 
-                        title="Étude sur les performances de classification"
-                        work="Élaboration d'une solution informatique pour la classification 
-                        d'images avec un réseau de neurones convolutifs (deep learning) dans l'objectif de comparer 
-                        les résultats de classification avec ceux d'un système embarqué.
-                        Environnement technique : C++
-                        "
+                        title="Master Degree from Engineering School"
+                        work="Major in computer science and image processing"
                     />
                     <Details
-                        position="Software engineer" 
-                        company="A-SIS" 
-                        companyLink="https://www.a-sis.com/"
-                        time="April 2019 - June 2019 (Internship)" 
+                        position="Undergraduate student" 
+                        company="IUT of Saint Etienne." 
+                        companyLink="https://www.iut.univ-st-etienne.fr/en/index.html"
+                        time="September 2016 - June 2018" 
                         address="Saint-Etienne, France" 
-                        title= "Mise à jour des bases de données avec IHM"
-                        work="Proposer, développer et appliquer une solution informatique pour 
-                        la mise à jour de bases de données. Recherche sur le bug de l'an 2038.
-                        Environnement technique : C++, Qt"
+                        title="Two-years technical Degree (DUT GEII)"
+                        work="Major in computer science and electronic science"
+                    />
+                    <Details
+                        position="High school student" 
+                        company="Lycée Georges Brassens" 
+                        companyLink="https://georges-brassens.ent.auvergnerhonealpes.fr/"
+                        time="Septembre 2013 - July 2016" 
+                        address="Rive-de-Gier, France" 
+                        title="High School Degree"
+                        work="Major in science"
                     />
             </ul>
         </div>

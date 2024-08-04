@@ -69,7 +69,7 @@ function NavBar() {
                     <CustomLink href="/" title="Home" className='text-light mr-4' />
                     <CustomLink href="/about" title="About & Services" className='mx-4' />
                     <CustomLink href="/resume" title="Resume" className='mx-4' />
-                    <CustomLink href="/articles" title="Contact" className='ml-4' />
+                    <CustomLink href="/contact" title="Contact" className='ml-4' />
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap'>
                     <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"

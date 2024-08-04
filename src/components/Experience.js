@@ -3,7 +3,7 @@ import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
 import AnimatedText from './AnimatedText'
 
-const Details = ({position, company, companyLink, time, address, work }) => {
+const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);
     return (
         <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between'>
@@ -17,9 +17,10 @@ const Details = ({position, company, companyLink, time, address, work }) => {
                     {position}&nbsp;<a 
                         href={companyLink} 
                         target="_blank"
-                        className='text-primary capitalize'>@{company}</a>
+                        className='underline capitalize'>@{company}</a>
                     </h3>
                 <span className='capitalize font-medium text-white/75'>{time} | {address}</span>
+                <div className='capitalize font-bold'>{title}</div>
                 <p className='font-medium w-full'>
                     {work}
                 </p>
@@ -39,7 +40,8 @@ const Experience = () => {
     );
   return (
     <div className='my-8'>
-        <AnimatedText text="Experiences" className='font-bold text-primary text-8xl mb-12 w-full text-center'/>
+        <h2 className='font-bold text-primary bg-light/75 backdrop-blur rounded-lg text-6xl mb-12 w-full text-center'>
+            Experiences</h2>
             
 
         <div ref={ref} className='w-[75%] mx-auto relative'>
@@ -53,7 +55,8 @@ const Experience = () => {
                         companyLink="https://insoft-infotel.com/"
                         time="March 2021 - October 2024" 
                         address="Toulouse, France" 
-                        work="Work as a full-stack developper on Arcsys, an archiving software. Front-end (Typescript, Angular), REST API, Back-end (Java), Build (Jenkins)."
+                        work="Work as a full-stack developper on Arcsys, an archiving software. 
+                        Technical environment: Front-end (Typescript, Angular), REST API, Back-end (Java), Build (Jenkins)."
                     />
                     <Details
                         position="Searcher in a Laboratory" 
@@ -61,13 +64,9 @@ const Experience = () => {
                         companyLink="https://www.tudublin.ie/"
                         time="Summer 2020 (Internship)" 
                         address="Dublin, Irlande (Full remote)" 
-                        title="Détection et prévention de chutes"
-                        work="Mise en place d'une solution informatique récupérant des données 
-                        via Bluetooth afin de pouvoir détecter si une personne fait un malaise. Mise 
-                        en place d'une interaction vocale.
-                        Environnement technique : Python, Linux
-                        Outils : Détecteur de fréquence cardiaque (polar OH1+) et de mouvement 
-                        (BBC micro:bit)."
+                        title="Detection and Prevention of Falls"                        
+                        work="Implementation of a solution that collects data via Bluetooth to detect if a person is experiencing a medical emergency and is falling. Implementation of voice interaction. Technical environment: Python, Linux. Tools: Heart rate sensor (Polar OH1+) and motion sensor (BBC micro
+                        )."
                     />
                     <Details
                         position="Searcher in a Laboratory" 
@@ -75,11 +74,9 @@ const Experience = () => {
                         companyLink="https://laboratoirehubertcurien.univ-st-etienne.fr/en/"
                         time="January 2019 - February 2019 (Internship)" 
                         address="Saint-Etienne, France" 
-                        title="Étude sur les performances de classification"
-                        work="Élaboration d'une solution informatique pour la classification 
-                        d'images avec un réseau de neurones convolutifs (deep learning) dans l'objectif de comparer 
-                        les résultats de classification avec ceux d'un système embarqué.
-                        Environnement technique : C++
+                        title="Study on Classification Performance"
+                        work="Development of a solution for image classification using a convolutional neural network (deep learning) with the aim of comparing classification results with those of an embedded system.
+                        Technical environment: C++
                         "
                     />
                     <Details
@@ -88,10 +85,9 @@ const Experience = () => {
                         companyLink="https://www.a-sis.com/"
                         time="April 2019 - June 2019 (Internship)" 
                         address="Saint-Etienne, France" 
-                        title= "Mise à jour des bases de données avec IHM"
-                        work="Proposer, développer et appliquer une solution informatique pour 
-                        la mise à jour de bases de données. Recherche sur le bug de l'an 2038.
-                        Environnement technique : C++, Qt"
+                        title="Database Update with GUI"
+                        work="Propose, develop, and implement a solution for updating databases. Research on the Year 2038 bug.
+                        Technical environment: C++, Qt"
                     />
             </ul>
         </div>

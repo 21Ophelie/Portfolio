@@ -41,10 +41,10 @@ const about = () => {
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
             <AnimatedText text="Who I Am & What I Do" className="!text-8xl pb-12 "/>
-            <div className='grid w-full grid-cols-8 lg:flex flex-col gap-16 text-light flex-wrap'>
+            <div className='grid w-full grid-cols-8 lg:flex flex-col gap-16 text-primary flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
-                    <div className=' bg-primary p-10 rounded-2xl'>
-                        <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>About me</h2>
+                    <div className=' bg-light/80 p-10 rounded-2xl'>
+                        <h2 className='mb-4 text-lg font-bold uppercase text-primary'>About me</h2>
                         <div className='font-medium text-justify gap-5 flex flex-col'>
                             <div> Hi, I'm Ophélie, a french web and software developer with 3 years of experience. 
                                 I specialize in creating high-quality, user-friendly digital solutions. 
@@ -87,7 +87,7 @@ const about = () => {
                         </div>
                     </div>
 
-            <div className='col-span-2 flex flex-col  bg-other/75 p-10 rounded-2xl '>
+            <div className='col-span-2 flex flex-col  bg-primary p-10 rounded-2xl '>
                     <div flex flex-row >
                         <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>What I offer</h2>
                         
