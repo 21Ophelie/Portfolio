@@ -46,13 +46,13 @@ const about = () => {
                     <div className=' bg-light/80 p-10 rounded-2xl'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-primary'>About me</h2>
                         <div className='font-medium text-justify gap-5 flex flex-col'>
-                            <div> Hi, I'm Ophélie, a french web and software developer with 3 years of experience. 
+                            <div> Hi, I&apos;m Ophélie, a french web and software developer with 3 years of experience. 
                                 I specialize in creating high-quality, user-friendly digital solutions. 
-                                I'm passionate about code, efficient design, and solving problems.</div>
-                            <div>When I'm not coding, you can find me running, practising Kung Fu or playing music, 
+                                I&apos;m passionate about code, efficient design, and solving problems.</div>
+                            <div>When I&apos;m not coding, you can find me running, practising Kung Fu or playing music, 
                                 always looking for inspiration and new challenges. </div>
-                            <div>I'm dedicated to continuous learning and growth, 
-                                and I'm excited to bring my expertise to your next project.</div>
+                            <div>I&apos;m dedicated to continuous learning and growth, 
+                                and I&apos;m excited to bring my expertise to your next project.</div>
                         </div>
                     </div>
                    
@@ -101,7 +101,7 @@ const about = () => {
                                 <li>&#10004; Custom Websites: Tailored to your brand and needs.</li>
                                 <li>&#10004; E-commerce: Secure and scalable online stores.</li>
                                 <li>&#10004; CMS Integration: Easy website management with WordPress.</li>
-                                <li>&#10004; SEO Optimization: Improve your website's search engine visibility.</li>
+                                <li>&#10004; SEO Optimization: Improve your website&apos;s search engine visibility.</li>
                                 </ul>
                             </div>
                             <div>
@@ -117,7 +117,7 @@ const about = () => {
                         </div>
                         <div className='m-auto text-center mt-10 relative'>
                             <div>
-                            Let's work together to bring your ideas to life !
+                            Let&apos;s work together to bring your ideas to life !
                             </div>
                            
                                 <HireMe/>

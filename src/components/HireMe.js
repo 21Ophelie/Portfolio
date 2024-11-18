@@ -17,12 +17,12 @@ const HireMe = () => {
                  
                 whileHover={{
                     backgroundColor:[
-                        "#2f6674",
                         "#a29607",
+                        "#2f6674",
                         "#a25107",
                         "#5b0045",
                         "#71115a",
-                        "#2f6674",
+                        "#a29607",
                        ],
                     transition: { duration:1, repeat:Infinity }
                 }}
