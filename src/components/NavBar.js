@@ -52,7 +52,7 @@ function NavBar() {
         setIsOpen(!isOpen);
     }
     return (
-        <header className='w-full text-light px-32 py-8 font-medium flex items-center justify-between relative'>
+        <header className='w-full text-light px-32 lg:px-8 py-8 font-medium flex items-center justify-between relative'>
 
             <button className='flex-col justify-center items-center hidden lg:flex' 
                     onClick={handleMenuClick}>
@@ -95,7 +95,7 @@ function NavBar() {
                     <CustomMobileLink href="/" title="Home" className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/about" title="About" className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/resume" title="Resume" className='' toggle={handleMenuClick}/>
-                    <CustomMobileLink href="/articles" title="Contact" className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/contact" title="Contact" className='' toggle={handleMenuClick}/>
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap mt-2'>
                     <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"

@@ -40,11 +40,11 @@ const Education = () => {
     );
   return (
     <div className='my-32'>
-        <h2 className='font-bold text-6xl mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
+        <h2 className='font-bold text-6xl py-2 lg:text-4xl mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
             Education
         </h2>
 
-        <div ref={ref} className='w-[75%] mx-auto relative'>
+        <div ref={ref} className='w-[75%] mx-auto relative md:w-full md:mx-0'>
             <motion.div 
                 style={{scaleY: scrollYProgress}}
                 className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />

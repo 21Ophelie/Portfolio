@@ -20,7 +20,7 @@ const Skill = ({name, x, y, color='light', textColor='primary'}) => {
 const Skills = () => {
   return (
     <>
-        <h2 className='text-primary bg-light/75 backdrop-blur rounded-lg font-bold text-6xl my-8 mb-16 w-full text-center'>Skills</h2>
+        <h2 className='text-primary bg-light/75 backdrop-blur rounded-lg font-bold text-6xl py-2 lg:text-4xl my-8 mb-16 w-full text-center'>Skills</h2>
         <div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight mt-4'>
             <Skill name="Web" x="0" y="0"/>
             <Skill name="CSS" x="-5vw" y="-10vw"/>

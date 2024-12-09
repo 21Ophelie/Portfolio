@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 
 
-const contact = () => {
+function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,9 +77,9 @@ const contact = () => {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text="How can I help you ?" className='font-bold text-light text-8xl mb-12 w-full text-center'/>
+            <AnimatedText text="How can I help you ?" className='font-bold text-light text-8xl mb-12 w-full text-center lg:!text-6xl'/>
             
-            <div className='flex px-20 py-10 mx-48 bg-light/50 backdrop-blur rounded-2xl sm:mx-0 sm:px-5'>
+            <div className='flex px-20 py-10 mx-48 bg-light/50 backdrop-blur rounded-2xl lg:mx-6 sm:px-5'>
               <form onSubmit={handleSubmit} 
                 className='w-full flex flex-col gap-8'>
                 <label className='flex flex-col gap-2'>
@@ -140,4 +140,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact
