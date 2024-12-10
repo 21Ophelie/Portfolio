@@ -15,7 +15,7 @@ const resume = () => {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text="My resume" className='font-bold text-light text-8xl mb-12 w-full text-center lg:!text-6xl'/>
+            <AnimatedText text="My resume" className='font-bold text-light text-8xl mb-12 w-full text-center'/>
             <Experience/>
             <Education/>
             <Skills/>

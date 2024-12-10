@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const Skill = ({name, x, y, color='light', textColor='primary'}) => {
     return (
         <motion.div 
-            className={`flex py-3 px-6 items-center justify-center rounded-full font-semibold bg-${color}/75 backdrop-blur text-${textColor} p-8 shadow-${color} cursor-pointer absolute`}
+            className={`flex py-3 px-6 items-center justify-center rounded-full font-semibold bg-${color} backdrop-blur text-${textColor} p-8 shadow-${color} lg:text-sm md:text-xs cursor-pointer absolute`}
            
             whileHover={{scale:1.05}}
             initial={{x:0, y:0}}
