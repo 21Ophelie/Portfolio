@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import SearchBar from './SearchBar'
-import { MailIcon, GithubIcon, LinkedInIcon } from './Icons';
+import { GithubIcon, LinkedInIcon } from './Icons';
 import { motion } from 'framer-motion';
 
 const CustomLink = ({ href, title, className = "" }) => {

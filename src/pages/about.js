@@ -122,11 +122,7 @@ const about = () => {
                            
                                 <HireMe/>
                             
-                        </div>
-                        
-
-                        
-                    
+                        </div>                       
                     </div>
 
                    

@@ -1,7 +1,6 @@
 import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
-import AnimatedText from './AnimatedText'
 
 const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);

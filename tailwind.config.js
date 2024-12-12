@@ -21,7 +21,8 @@ module.exports = {
         'spin-slow': 'spin 8s linear infinite'
       },
       backgroundImage: {
-       circularLight: 'repeating-radial-gradient(#5b0045, #5b0045 10px, #000000 100px);'
+       circularLight: 'repeating-radial-gradient(#5b0045, #5b0045 10px, #000000 100px);',
+       lgCircularLight: 'repeating-radial-gradient(#5b0045 100px, #5b0045 10px, #000000 200px);'
       } 
     },
     screens: {

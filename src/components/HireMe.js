@@ -29,9 +29,6 @@ const HireMe = () => {
             >
                 <span className='p-2 font-bold text-sm'>CONTACT ME</span>
             </MotionLink>
-           
-
-
         </div>
     </div>
   )
