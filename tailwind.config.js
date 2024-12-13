@@ -22,7 +22,7 @@ module.exports = {
       },
       backgroundImage: {
        circularLight: 'repeating-radial-gradient(#5b0045, #5b0045 10px, #000000 100px);',
-       lgCircularLight: 'repeating-radial-gradient(#5b0045 100px, #5b0045 10px, #000000 200px);'
+       lgCircularLight: 'repeating-radial-gradient(#5b0045, #5b0045 10px, #000000 70px);'
       } 
     },
     screens: {

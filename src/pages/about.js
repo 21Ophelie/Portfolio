@@ -41,7 +41,7 @@ const about = () => {
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
             <AnimatedText text="Who I Am & What I Do" className="!text-8xl pb-12 lg:!text-6xl"/>
-            <div className='grid w-full grid-cols-8 lg:flex flex-col gap-16 text-primary flex-wrap'>
+            <div className='grid w-full grid-cols-8 md:flex flex-col gap-16 text-primary flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
                     <div className=' bg-light/80 p-10 rounded-2xl'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-primary'>About me</h2>
@@ -73,17 +73,17 @@ const about = () => {
             </div>
 
             <div className='flex flex-row justify-around text-light flex-wrap my-10' >
-                        <div className='my-4 flex flex-col items-end justify-center'>
-                            <span className='inline-block text-7xl font-bold'>
+                        <div className='my-4 flex flex-col items-center justify-center'>
+                            <span className='inline-block text-7xl font-bold lg:text-6xl sm:text-5xl'>
                                 <AnimatedNumbers value="3"/>+
                             </span>
-                            <h2 className='font-medium capitalize text-xl text-light/75'>years of experience</h2>
+                            <h2 className='font-medium capitalize text-xl lg:text-base sm:text-sm text-light/75'>years of experience</h2>
                         </div>
-                        <div className='my-4 flex flex-col items-end justify-center'>
-                            <span className='inline-block text-7xl font-bold'>
+                        <div className='my-4 flex flex-col items-center justify-center'>
+                            <span className='inline-block text-7xl lg:text-6xl sm:text-5xl font-bold'>
                                 <AnimatedNumbers value="9"/>+
                             </span>
-                            <h2 className='font-medium capitalize text-xl text-light/75'>programming languages known</h2>
+                            <h2 className='font-medium capitalize text-xl lg:text-base sm:text-sm text-light/75'>programming languages known</h2>
                         </div>
                     </div>
 
