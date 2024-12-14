@@ -119,20 +119,20 @@ const about = () => {
                             <div>
                             Let&apos;s work together to bring your ideas to life !
                             </div>
+                        
+                            <HireMe/>   
                            
-                                <HireMe/>
-                            
-                        </div>                       
+                        </div>   
+                                
+                                  
                     </div>
 
-                   
-
-                    
-                    
                 </div>
-
+         
         </Layout>
-
+        <div  className='lgmin:hidden'>                    
+            <HireMe/>  
+        </div>
     </main>
     </>
   )

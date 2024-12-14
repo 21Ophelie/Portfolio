@@ -93,7 +93,7 @@ function NavBar() {
             bg-light/20 rounded-lg backdrop-blur-md py-32'>
                 <nav className='flex flex-col items-center justify-center'>
                     <CustomMobileLink href="/" title="Home" className='' toggle={handleMenuClick}/>
-                    <CustomMobileLink href="/about" title="About" className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/about" title="About & Services" className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/resume" title="Resume" className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/contact" title="Contact" className='' toggle={handleMenuClick}/>
                 </nav>
