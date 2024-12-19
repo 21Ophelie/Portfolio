@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-import Link from 'next/link'
+import { Link } from './_shared/Link';
 import { useRouter } from 'next/router';
 import SearchBar from './SearchBar'
 import { GithubIcon, LinkedInIcon } from './Icons';
 import { motion } from 'framer-motion';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { i18nConfig } from '../../i18n';
+import { useRouteRedirect } from '@/hooks/useRouteRedirect';
+import { useI18n } from '@/hooks/useI18n';
 
 const CustomLink = ({ href, title, className = "" }) => {
     const router = useRouter();
@@ -13,7 +17,7 @@ const CustomLink = ({ href, title, className = "" }) => {
             {title}
             <span className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
             group-hover:w-full transition-[width] ease duration-300
-            ${router.asPath === href ? 'w-full' : 'w-0'}
+            ${router.asPath === '/' + router.query['locale'] + (String(href).length > 1 ? href : '') ? 'w-full' : 'w-0'}
             `}>
                 &nbsp;
             </span>
@@ -24,10 +28,11 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
     const router = useRouter();
+    const { redirect } = useRouteRedirect();
 
     const handleClick = () => {
         toggle();
-        router.push(href);
+        redirect(href);
     }
 
     return (
@@ -36,7 +41,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
             <span className={`
             h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
             group-hover:w-full transition-[width] ease duration-300
-            ${router.asPath === href ? 'w-full' : 'w-0'}
+            ${router.asPath === '/' + router.query['locale'] + href ? 'w-full' : 'w-0'}
             `}>
                 &nbsp;
             </span>
@@ -47,6 +52,7 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
 function NavBar() {
 
+    const { t } = useI18n('common');
     const [isOpen, setIsOpen] = useState(false);
     const handleMenuClick = () => {
         setIsOpen(!isOpen);
@@ -66,10 +72,17 @@ function NavBar() {
 
             <div className='w-full flex justify-between items-center lg:hidden'>
                 <nav>
-                    <CustomLink href="/" title="Home" className='text-light mr-4' />
-                    <CustomLink href="/about" title="About & Services" className='mx-4' />
-                    <CustomLink href="/resume" title="Resume" className='mx-4' />
-                    <CustomLink href="/contact" title="Contact" className='ml-4' />
+                    <CustomLink href="/" title={t('navbar_home')} className='text-light mr-4' />
+                    <CustomLink href="/about" title={t('navbar_about')} className='mx-4' />
+                    <CustomLink href="/resume" title={t('navbar_resume')} className='mx-4' />
+                    <CustomLink href="/contact" title={t('navbar_contact')} className='ml-4' />
+                </nav>
+                <nav>
+                    <div style={{ display: "flex", gap: "1rem" }}>
+                        {i18nConfig.locales.map((locale) => (
+                        <LanguageSwitcher key={locale} locale={locale} />
+                        ))}
+                    </div>
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap'>
                     <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"
@@ -92,10 +105,10 @@ function NavBar() {
             fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
             bg-light/20 rounded-lg backdrop-blur-md py-32'>
                 <nav className='flex flex-col items-center justify-center'>
-                    <CustomMobileLink href="/" title="Home" className='' toggle={handleMenuClick}/>
-                    <CustomMobileLink href="/about" title="About & Services" className='' toggle={handleMenuClick}/>
-                    <CustomMobileLink href="/resume" title="Resume" className='' toggle={handleMenuClick}/>
-                    <CustomMobileLink href="/contact" title="Contact" className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/" title={t('navbar_home')} className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/about" title={t('navbar_about')} className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/resume" title={t('navbar_resume')} className='' toggle={handleMenuClick}/>
+                    <CustomMobileLink href="/contact" title={t('navbar_contact')} className='' toggle={handleMenuClick}/>
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap mt-2'>
                     <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"

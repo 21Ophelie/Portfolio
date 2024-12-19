@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
+import { useI18n } from '@/hooks/useI18n'
 
 const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);
@@ -30,6 +31,7 @@ const Details = ({position, company, companyLink, time, address, title, work }) 
 }
 
 const Education = () => {
+    const { t } = useI18n('common');
     const ref = useRef(null);
     const {scrollYProgress} = useScroll( 
         {
@@ -40,7 +42,7 @@ const Education = () => {
   return (
     <div className='my-32'>
         <h2 className='font-bold text-6xl py-2 lg:text-4xl mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
-            Education
+            {t('resume_education_title')}
         </h2>
 
         <div ref={ref} className='w-[75%] mx-auto relative md:w-full md:mx-0'>
@@ -49,39 +51,39 @@ const Education = () => {
                 className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />
             <ul w-full flex flex-col items-start justify-between ml-4>                
                 <Details
-                        position="Erasmus student" 
-                        company="Università di Padova" 
+                        position={t('resume_education_padova_position')} 
+                        company={t('resume_education_padova_company')} 
                         companyLink="https://www.unipd.it/en/"
-                        time="September 2020 - March 2021" 
-                        address="Padova, Italie" 
-                        work="Major in Computer science and Machine Learning (AI)"
+                        time={t('resume_education_padova_time')} 
+                        address={t('resume_education_padova_address')} 
+                        work={t('resume_education_padova_work')} 
                     />
                     <Details
-                        position="Graduate student" 
-                        company="Telecom Saint-Etienne" 
+                        position={t('resume_education_telecom_position')} 
+                        company={t('resume_education_telecom_company')}  
                         companyLink="https://www.telecom-st-etienne.fr/en/"
-                        time="September 2018 - October 2021" 
-                        address="Saint-Etienne, France" 
-                        title="Master Degree from Engineering School"
-                        work="Major in computer science and image processing"
+                        time={t('resume_education_telecom_time')} 
+                        address={t('resume_education_telecom_address')} 
+                        title={t('resume_education_telecom_title')}
+                        work={t('resume_education_telecom_work')} 
                     />
                     <Details
-                        position="Undergraduate student" 
-                        company="IUT of Saint Etienne." 
+                        position={t('resume_education_iut_position')} 
+                        company={t('resume_education_iut_company')} 
                         companyLink="https://www.iut.univ-st-etienne.fr/en/index.html"
-                        time="September 2016 - June 2018" 
-                        address="Saint-Etienne, France" 
-                        title="Two-years technical Degree (DUT GEII)"
-                        work="Major in computer science and electronic science"
+                        time={t('resume_education_iut_time')} 
+                        address={t('resume_education_iut_address')} 
+                        title={t('resume_education_iut_title')}
+                        work={t('resume_education_iut_work')} 
                     />
                     <Details
-                        position="High school student" 
-                        company="Lycée Georges Brassens" 
+                        position={t('resume_education_hs_position')} 
+                        company={t('resume_education_hs_company')} 
                         companyLink="https://georges-brassens.ent.auvergnerhonealpes.fr/"
-                        time="Septembre 2013 - July 2016" 
-                        address="Rive-de-Gier, France" 
-                        title="High School Degree"
-                        work="Major in science"
+                        time={t('resume_education_hs_time')} 
+                        address={t('resume_education_hs_address')} 
+                        title={t('resume_education_hs_title')}
+                        work={t('resume_education_hs_work')} 
                     />
             </ul>
         </div>

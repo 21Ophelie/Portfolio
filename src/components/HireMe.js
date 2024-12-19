@@ -2,9 +2,13 @@ import React from 'react'
 import { CircularText } from './Icons'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
+import { useI18n } from '@/hooks/useI18n';
 
 const MotionLink = motion(Link);
-const HireMe = () => {
+
+function HireMe() {
+
+    const { t } = useI18n('common');
   return (
     <div className='z-40 absolute bottom-2 right-10 flex overflow-hidden items-center justify-center lg:right-6 lg:bottom-auto lg:-top-0'>
         <div className='w-48 lg:w-[90px] overflow-hidden h-auto flex items-center justify-center relative'>
@@ -27,7 +31,7 @@ const HireMe = () => {
                     transition: { duration:1, repeat:Infinity }
                 }}
             >
-            <span className='p-2 font-bold text-sm lg:text-xs lg:text-[9px]'>Contact me</span>
+            <span className='p-2 font-bold text-sm lg:text-xs lg:text-[9px]'>{t('hire_me')}</span>
             </MotionLink>
         </div>
     </div>

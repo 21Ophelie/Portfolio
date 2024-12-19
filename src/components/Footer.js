@@ -1,17 +1,17 @@
 import React from 'react'
 import Layout from './Layout'
-import Link from 'next/link'
 import { motion } from 'framer-motion';
+import { useI18n } from '@/hooks/useI18n';
 
-const MotionLink = motion(Link);
 
-const Footer = () => {
+function Footer() {
+  const { t } = useI18n('common');
   return (
     <footer className='w-full border-t-2 border-solid text-light border-light font-medium text-lg'>
         <Layout className='py-8 flex items-center justify-between'>
-            <span>{new Date().getFullYear()} &copy; All Rights reserved.</span>
+            <span>{new Date().getFullYear()} &copy; {t('footer_rights')}</span>
             <div>
-              Portfolio inspired by&nbsp;
+              {t('footer_inspired')}&nbsp;
               <motion.a 
                 className='underline underline-offset-2' 
                 href="https://devdreaming.com/"  target="(_blank)"
@@ -19,7 +19,7 @@ const Footer = () => {
                   <span>CodeBucks</span>                   
               </motion.a>
             </div>
-            <div>Have a good day <span className='text-primary text-2xl px-1'>&#9728;</span> </div>
+            <div>{t('footer_goodday')}<span className='text-primary text-2xl px-1'>&#9728;</span> </div>
         </Layout>
     </footer>
   )

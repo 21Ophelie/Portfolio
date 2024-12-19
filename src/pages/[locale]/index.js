@@ -2,10 +2,12 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import AnimatedText from '@/components/AnimatedText'
 import Image from 'next/image'
-import girl1 from '../../public/images/svgs/girl1.svg'
+import girl1 from '../../../public/images/svgs/girl1.svg'
 import { ReactTyped } from "react-typed";
+import { useI18n } from "@/hooks/useI18n";
 
 export default function Home() {
+  const { t } = useI18n('common');
   return (
     <>
       <Head>
@@ -17,9 +19,8 @@ export default function Home() {
       <div className='w-full pb-0 sm:px-0
                            rounded-lg backdrop-blur-md'>
         <Layout className='pt-0'>
-
           <div className='mx-auto relative pd-10 flex flex-row items-center self-center justify-center'>
-            <AnimatedText text="Hello, I'm Ophélie !" 
+            <AnimatedText text={t('home_welcome')} 
             className="!text-8xl mx-auto justify-self-center items-center self-center flex flex-wrap justify-center lg:!text-6xl !text-left"/>
           </div>
           <div className='mt-8 px-8 sm:px-2 bg-center'>
@@ -31,12 +32,12 @@ export default function Home() {
 
             <ReactTyped className='my-4 font-semibold text-primary text-3xl md:text-2xl sm:text-lg ml-2 sm:m-2'
                             strings={[
-                              "I'm a software developer",
-                              "I'm a web developer",
-                              "I'm a full-stack developer",
-                              "I'm an UI/UX designer",
-                              "I do Kung Fu",
-                              "I love singing"
+                              t('home_description_software'),
+                              t('home_description_web'),
+                              t('home_description_fs'),
+                              t('home_description_UIUX'),
+                              t('home_description_kf'),
+                              t('home_description_singing')
                             ]}
                             typeSpeed={40}
                             backSpeed={50}

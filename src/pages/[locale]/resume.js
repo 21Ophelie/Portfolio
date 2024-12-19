@@ -5,8 +5,10 @@ import Layout from '@/components/Layout'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import AnimatedText from '@/components/AnimatedText'
+import { useI18n } from '@/hooks/useI18n'
 
-const resume = () => {
+function Resume() {
+  const { t } = useI18n('common');
   return (
     <>
     <Head>
@@ -15,7 +17,7 @@ const resume = () => {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text="My resume" className='font-bold text-light text-8xl lg:text-6xl mb-12 w-full text-center'/>
+            <AnimatedText text={t('resume_title')} className='font-bold text-light text-8xl lg:text-6xl mb-12 w-full text-center'/>
             <Experience/>
             <Education/>
             <Skills/>
@@ -25,4 +27,4 @@ const resume = () => {
   )
 }
 
-export default resume
+export default Resume

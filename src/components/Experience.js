@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import { motion, useScroll } from 'framer-motion'
 import LiIcon from "./LiIcon"
+import { useI18n } from '@/hooks/useI18n'
 
 const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);
@@ -30,6 +31,7 @@ const Details = ({position, company, companyLink, time, address, title, work }) 
 }
 
 const Experience = () => {
+    const { t } = useI18n('common');
     const ref = useRef(null);
     const {scrollYProgress} = useScroll( 
         {
@@ -40,7 +42,7 @@ const Experience = () => {
   return (
     <div className='my-8'>
         <h2 className='font-bold text-primary bg-light/75 backdrop-blur rounded-lg text-6xl py-2 lg:text-4xl mb-12 w-full text-center'>
-            Experiences</h2>
+            {t('resume_experiences_title')}</h2>
             
 
         <div ref={ref} className='w-[75%] mx-auto relative md:w-full md:mx-0'>
@@ -49,44 +51,39 @@ const Experience = () => {
                 className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />
             <ul w-full flex flex-col items-start justify-between ml-4>                
                 <Details
-                        position="Software engineer" 
-                        company="Infotel" 
+                        position={t('resume_exp_infotel_position')}
+                        company={t('resume_exp_infotel_company')}
                         companyLink="https://insoft-infotel.com/"
-                        time="March 2021 - October 2024" 
-                        address="Toulouse, France" 
-                        work="Work as a full-stack developper on Arcsys, an archiving software. 
-                        Technical environment: Front-end (Typescript, Angular), REST API, Back-end (Java), Build (Jenkins)."
+                        time={t('resume_exp_infotel_time')}
+                        address={t('resume_exp_infotel_address')}
+                        work={t('resume_exp_infotel_work')}
                     />
                     <Details
-                        position="Searcher in a Laboratory" 
-                        company="Technological University of Dublin" 
+                        position={t('resume_exp_tud_position')}
+                        company={t('resume_exp_tud_company')}
                         companyLink="https://www.tudublin.ie/"
-                        time="Summer 2020 (Internship)" 
-                        address="Dublin, Irlande (Full remote)" 
-                        title="Detection and Prevention of Falls"                        
-                        work="Implementation of a solution that collects data via Bluetooth to detect if a person is experiencing a medical emergency and is falling. Implementation of voice interaction. Technical environment: Python, Linux. Tools: Heart rate sensor (Polar OH1+) and motion sensor (BBC micro
-                        )."
+                        time={t('resume_exp_tud_time')}
+                        title={t('resume_exp_tud_title')}
+                        address={t('resume_exp_tud_address')}
+                        work={t('resume_exp_tud_work')}
                     />
                     <Details
-                        position="Searcher in a Laboratory" 
-                        company="Hubert Curien Laboratory" 
+                        position={t('resume_exp_hc_position')}
+                        company={t('resume_exp_hc_company')}
                         companyLink="https://laboratoirehubertcurien.univ-st-etienne.fr/en/"
-                        time="January 2019 - February 2019 (Internship)" 
-                        address="Saint-Etienne, France" 
-                        title="Study on Classification Performance"
-                        work="Development of a solution for image classification using a convolutional neural network (deep learning) with the aim of comparing classification results with those of an embedded system.
-                        Technical environment: C++
-                        "
+                        time={t('resume_exp_hc_time')}
+                        title={t('resume_exp_hc_title')}
+                        address={t('resume_exp_hc_address')}
+                        work={t('resume_exp_hc_work')}
                     />
                     <Details
-                        position="Software engineer" 
-                        company="A-SIS" 
+                        position={t('resume_exp_asis_position')}
+                        company={t('resume_exp_asis_company')}
                         companyLink="https://www.a-sis.com/"
-                        time="April 2019 - June 2019 (Internship)" 
-                        address="Saint-Etienne, France" 
-                        title="Database Update with GUI"
-                        work="Propose, develop, and implement a solution for updating databases. Research on the Year 2038 bug.
-                        Technical environment: C++, Qt"
+                        time={t('resume_exp_asis_time')}
+                        title={t('resume_exp_asis_title')}
+                        address={t('resume_exp_asis_address')}
+                        work={t('resume_exp_asis_work')}
                     />
             </ul>
         </div>
