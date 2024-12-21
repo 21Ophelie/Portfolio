@@ -21,16 +21,17 @@ export default function Home() {
         <Layout className='pt-0'>
           <div className='mx-auto relative pd-10 flex flex-row items-center self-center justify-center'>
             <AnimatedText text={t('home_welcome')} 
-            className="!text-8xl mx-auto justify-self-center items-center self-center flex flex-wrap justify-center lg:!text-6xl !text-left"/>
+            className="!text-8xl mx-auto justify-self-center items-center self-center flex flex-wrap justify-center 
+              lg:!text-6xl sm:!text-5xl xs:!text-4xl !text-left"/>
           </div>
           <div className='mt-8 px-8 sm:px-2 bg-center'>
-                <Image src={girl1} alt="drawing"  style={{width: '99% !important', justifySelf: 'center' }} />
+                <Image src={girl1} alt="drawing" className='w-full' style={{justifySelf: 'center' }} />
           </div>             
               
-          <div className=' absolute top-48 left-1/3 right-1/3 flex bg-light/75 backdrop-blur px-5 py-3 mx-6 rounded-2xl items-center self-center mt-2
-            xl:left-60 xl:right-60 lg:left-40 lg:right-40 md:right-32 md:left-32 sm:right-16 sm:left-16 xs:left-3 xs:right-3'>
+          <div className='absolute top-60 xs:top-48 left-1/4 right-1/4 flex bg-light/75 backdrop-blur px-5 py-3 mx-6 rounded-2xl items-center self-center mt-2
+            xl:left-60 xl:right-60 lg:left-40 lg:right-40 md:right-32 md:left-32 sm:right-16 sm:left-16 xs:left-3 xs:right-3 md:py-2 sm:py-1'>
 
-            <ReactTyped className='my-4 font-semibold text-primary text-3xl md:text-2xl sm:text-lg ml-2 sm:m-2'
+            <ReactTyped className='my-4 font-semibold text-primary text-3xl lg:text-2xl md:text-xl sm:text-lg xs:text-sm ml-2 sm:m-2'
                             strings={[
                               t('home_description_software'),
                               t('home_description_web'),

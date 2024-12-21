@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { languageDetector } from "@/lib/languageDetector";
 
+
 /**
  * Renders a language switcher button that allows the user to switch between different locales.
  *
@@ -34,24 +35,14 @@ export const LanguageSwitcher = ({
           languageDetector.cache ? languageDetector.cache(locale) : {}
         }
       >
-        <button style={{ fontSize: "small" }}>{locale}</button>
+        <button style={{ fontSize: "small" }} className={`
+            group-hover:border-solid group-hover:border-b-light group-hover:border-b-2 transition-[width] ease duration-300
+            ${router.asPath.includes(locale) ? 'border-b-light border-solid border-b-2' : 'border-none'}
+            `}>{locale}
+        <span >
+            </span>
+        </button>
+        
       </Link>
     );
   };
-
-/**
-const LanguageSwitcher = () => {
-    const { lang } = useTranslation();
-    return (
-        <div>
-            <Link href="/" locale="en">
-                <button disabled={lang === 'en'}>English</button>
-            </Link>
-            <Link href="/" locale="fr">
-                <button disabled={lang === 'fr'}>Français</button>
-            </Link>
-        </div>
-  )
-}
-
-export default LanguageSwitcher **/

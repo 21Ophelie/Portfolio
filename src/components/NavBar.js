@@ -15,7 +15,7 @@ const CustomLink = ({ href, title, className = "" }) => {
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
-            <span className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
+            <span className={`h-[2px] inline-block bg-light absolute left-0 -bottom-0.5
             group-hover:w-full transition-[width] ease duration-300
             ${router.asPath === '/' + router.query['locale'] + (String(href).length > 1 ? href : '') ? 'w-full' : 'w-0'}
             `}>
@@ -39,9 +39,9 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
         <button href={href} className={`${className} relative group my-2`} onClick={handleClick}>
             {title}
             <span className={`
-            h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
+            h-[2px] inline-block bg-light absolute left-0 -bottom-0.5
             group-hover:w-full transition-[width] ease duration-300
-            ${router.asPath === '/' + router.query['locale'] + href ? 'w-full' : 'w-0'}
+            ${router.asPath === '/' + router.query['locale'] + (String(href).length > 1 ? href : '') ? 'w-full' : 'w-0'}
             `}>
                 &nbsp;
             </span>
@@ -58,15 +58,16 @@ function NavBar() {
         setIsOpen(!isOpen);
     }
     return (
-        <header className='w-full text-light px-32 lg:px-8 py-8 font-medium flex items-center justify-between relative'>
+        <header className='w-full text-light px-32 lg:px-5 xs:px-2 py-8 font-medium flex items-center justify-between relative lg:fixed
+            lg:z-50'>
 
             <button className='flex-col justify-center items-center hidden lg:flex' 
                     onClick={handleMenuClick}>
-                <span className={`bg-light block h-0.5 w-6 rounded-sm transition-all duration-300
+                <span className={`bg-other block h-0.5 w-6 rounded-sm transition-all duration-300
                  ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                <span className={`bg-light block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 
+                <span className={`bg-other block h-0.5 w-6 rounded-sm my-0.5 transition-all duration-300 
                     ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`bg-light block h-0.5 w-6 rounded-sm transition-all duration-300
+                <span className={`bg-other block h-0.5 w-6 rounded-sm transition-all duration-300
                  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
             </button>
 
@@ -109,6 +110,13 @@ function NavBar() {
                     <CustomMobileLink href="/about" title={t('navbar_about')} className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/resume" title={t('navbar_resume')} className='' toggle={handleMenuClick}/>
                     <CustomMobileLink href="/contact" title={t('navbar_contact')} className='' toggle={handleMenuClick}/>
+                </nav>
+                <nav>
+                    <div style={{ display: "flex", gap: "1rem" }}>
+                        {i18nConfig.locales.map((locale) => (
+                        <LanguageSwitcher key={locale} locale={locale} />
+                        ))}
+                    </div>
                 </nav>
                 <nav className='flex items-center justify-center flex-wrap mt-2'>
                     <motion.a href="https://fr.linkedin.com/in/ophelie-deschaux" target="(_blank)"

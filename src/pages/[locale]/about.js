@@ -45,7 +45,7 @@ function About() {
             <AnimatedText text={t('about_title')} className="!text-8xl pb-12 lg:!text-6xl"/>
             <div className='grid w-full grid-cols-8 md:flex flex-col gap-16 text-primary flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
-                    <div className=' bg-light/80 p-10 rounded-2xl'>
+                    <div className=' bg-light/80 p-10 lg:p-8 rounded-2xl'>
                         <h2 className='mb-4 text-lg font-bold uppercase text-primary'>{t('about_me_title')}</h2>
                         <div className='font-medium text-justify gap-5 flex flex-col'>
                             <div>{t('about_me_1')}</div>
@@ -85,7 +85,7 @@ function About() {
                         </div>
                     </div>
 
-            <div className='col-span-2 flex flex-col  bg-primary p-10 rounded-2xl '>
+            <div className='col-span-2 flex flex-col  bg-primary p-10 lg:p-8 rounded-2xl '>
                     <div flex flex-row >
                         <h2 className='mb-4 text-lg font-bold uppercase text-light/75'>{t('about_services_title')}</h2>
                         
@@ -115,8 +115,10 @@ function About() {
                             <div>
                                 {t('about_services_conclusion')}
                             </div>
-                        
-                            <HireMe/>   
+                            <div className='lg:hidden'>
+                                <HireMe/>   
+                            </div>
+                            
                            
                         </div>   
                                 
