@@ -15,7 +15,7 @@ function HireMe() {
             <CircularText className={"fill-light animate-spin-slow"}></CircularText>
             <MotionLink 
                 href="mailto:ophelie.deschaux@gmail.com" 
-                className='w-24 h-24 lg:w-14 lg:h-14 text-light bg-other flex items-center 
+                className='w-24 h-24 lg:w-12 lg:h-12 text-light bg-other lg:bg-primary flex items-center 
                 rounded-full justify-center absolute text-center
                 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-base font-semibold'
                  

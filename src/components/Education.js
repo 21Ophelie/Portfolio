@@ -6,7 +6,7 @@ import { useI18n } from '@/hooks/useI18n'
 const Details = ({position, company, companyLink, time, address, title, work }) => {
     const ref = useRef(null);
     return (
-        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-left justify-between'>
+        <li ref={ref} className='my-8 first:mt-0 last:mb-0 w-[60%] sm:w-[80%] mx-auto flex flex-col items-left justify-between'>
            <LiIcon reference={ref} />
             <motion.div
             initial={{y:50}}
@@ -41,14 +41,14 @@ const Education = () => {
     );
   return (
     <div className='my-32'>
-        <h2 className='font-bold text-6xl py-2 lg:text-4xl mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
+        <h2 className='font-bold text-6xl py-2 lg:text-4xl  xs:text-3xl  mb-12 w-full bg-light/75 backdrop-blur rounded-lg text-primary text-center'>
             {t('resume_education_title')}
         </h2>
 
         <div ref={ref} className='w-[75%] mx-auto relative md:w-full md:mx-0'>
             <motion.div 
                 style={{scaleY: scrollYProgress}}
-                className='absolute left-14 top-0 w-[4px] h-full bg-primary origin-top' />
+                className='absolute left-14 sm:left-4 top-0 w-[4px] h-full bg-primary origin-top' />
             <ul w-full flex flex-col items-start justify-between ml-4>                
                 <Details
                         position={t('resume_education_padova_position')} 

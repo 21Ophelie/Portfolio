@@ -42,7 +42,7 @@ function About() {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text={t('about_title')} className="!text-8xl pb-12 lg:!text-6xl"/>
+            <AnimatedText text={t('about_title')} className="lg:!text-7xl sm:!text-6xl xs:!text-5xl pb-12 xs:pb-6"/>
             <div className='grid w-full grid-cols-8 md:flex flex-col gap-16 text-primary flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
                     <div className=' bg-light/80 p-10 lg:p-8 rounded-2xl'>

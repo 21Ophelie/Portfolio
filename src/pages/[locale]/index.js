@@ -19,12 +19,12 @@ export default function Home() {
       <div className='w-full pb-0 sm:px-0
                            rounded-lg backdrop-blur-md'>
         <Layout className='pt-0'>
-          <div className='mx-auto relative pd-10 flex flex-row items-center self-center justify-center'>
+          <div className='mx-auto relative pb-10 flex flex-row items-center self-center justify-center'>
             <AnimatedText text={t('home_welcome')} 
             className="!text-8xl mx-auto justify-self-center items-center self-center flex flex-wrap justify-center 
-              lg:!text-6xl sm:!text-5xl xs:!text-4xl !text-left"/>
+              lg:!text-7xl sm:!text-6xl xs:!text-5xl !text-left"/>
           </div>
-          <div className='mt-8 px-8 sm:px-2 bg-center'>
+          <div className='mt-8 bg-center'>
                 <Image src={girl1} alt="drawing" className='w-full' style={{justifySelf: 'center' }} />
           </div>             
               

@@ -78,7 +78,7 @@ function Contact() {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light '>
         <Layout>
-            <AnimatedText text={t('contact_title')} className='font-bold text-light text-8xl mb-12 w-full text-center lg:!text-6xl'/>
+            <AnimatedText text={t('contact_title')} className='font-bold text-light text-8xl mb-12 lg:mb-4 w-full text-center lg:!text-7xl sm:!text-6xl xs:!text-5xl'/>
             
             <div className='flex px-20 py-10 mx-48 bg-light/50 backdrop-blur rounded-2xl lg:mx-6 sm:px-8 sm:mx-0'>
               <form onSubmit={handleSubmit} 

@@ -17,7 +17,7 @@ function Resume() {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text={t('resume_title')} className='font-bold text-light text-8xl lg:text-6xl mb-12 w-full text-center'/>
+            <AnimatedText text={t('resume_title')} className='font-bold text-light text-8xl lg:!text-7xl sm:!text-6xl xs:!text-5xl mb-12 lg:mb-6 xs:mb-0 w-full text-center'/>
             <Experience/>
             <Education/>
             <Skills/>

@@ -7,8 +7,8 @@ import { useI18n } from '@/hooks/useI18n';
 function Footer() {
   const { t } = useI18n('common');
   return (
-    <footer className='w-full border-t-2 border-solid text-light border-light font-medium text-lg'>
-        <Layout className='py-8 flex items-center justify-between'>
+    <footer className='w-full border-t-2 border-solid text-light border-light font-medium text-lg lg:text-sm sm:text-xs xs:text-[10px]'>
+        <Layout className='py-8 mt-8 gap-4 lg:mt-6 sm:mt-0 sm:!px-8 flex items-center justify-between'>
             <span>{new Date().getFullYear()} &copy; {t('footer_rights')}</span>
             <div>
               {t('footer_inspired')}&nbsp;
