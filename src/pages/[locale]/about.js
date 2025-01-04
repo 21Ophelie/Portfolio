@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import Head from 'next/head'
 import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
-import profilPic from '../../../public/images/profile/dev-pic-light.png'
+import profilPic from '../../../public/images/profile/dev-pic-light.jpg'
 import Image from 'next/image'
 import HireMe from '@/components/HireMe'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
@@ -42,7 +42,7 @@ function About() {
     </Head>
     <main className='flex flex-col items-center justify-center w-full text-light'>
         <Layout>
-            <AnimatedText text={t('about_title')} className="lg:!text-7xl sm:!text-6xl xs:!text-5xl pb-12 xs:pb-6"/>
+            <AnimatedText text={t('about_title')} className=" text-8xl lg:!text-7xl sm:!text-6xl xs:!text-5xl pb-12 xs:pb-6"/>
             <div className='grid w-full grid-cols-8 md:flex flex-col gap-16 text-primary flex-wrap'>
                 <div className='col-span-5 flex flex-col justify-between'>
                     <div className=' bg-light/80 p-10 lg:p-8 rounded-2xl'>
@@ -56,17 +56,13 @@ function About() {
                    
                 </div>
 
-                <div className='col-span-3 relative flex flex-col-reverse'>
-                    <div className='absolute h-full w-full rounded-2xl border-1 border-solid 
-                                    backdrop-blur-md bg-light/20 '>
-                    </div>
-                    <div className='z-30 relative self-end'>
+                <div className='col-span-3 z-30 relative self-center'>
                             <Image src={profilPic} alt="Profile picture" priority 
-                            className='rounded-[0.5rem]' 
-                            width={275}
+                            className='rounded-[1rem]' 
+                            
                             />
                     </div>
-                </div>                         
+                                    
                
             </div>
 
